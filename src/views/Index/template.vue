@@ -7,10 +7,10 @@
         :key="blog.id"
         :to="`/detail/${blog.id}`"
       >
-        <figure class="avatar">
+        <router-link class="avatar" :to="`/user/${blog.user.id}`">
           <img :src="blog.user.avatar" :alt="blog.user.username" />
           <figcaption>{{ blog.user.username }}</figcaption>
-        </figure>
+        </router-link>
         <h3>
           {{ blog.title }} <span>{{ friendlyDate(blog.createdAt) }}</span>
         </h3>
